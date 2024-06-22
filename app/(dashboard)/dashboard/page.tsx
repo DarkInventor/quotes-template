@@ -166,7 +166,7 @@ function DashboardPage() {
             onChange={(e) => setTag(e.target.value)}
           />
         </div>
-        <Button onClick={handleCheckout}>Get Today&apos;s Quotes</Button>
+        <Button onClick={getQuotes}>Get Today&apos;s Quotes</Button>
       </div>
 
       {/* Special Quote */}
