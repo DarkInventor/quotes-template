@@ -8,13 +8,7 @@ import { Icons } from "@/components/more-icons";
 import ShinyButton from "@/components/magicui/shiny-button";
 import { useRouter } from "next/navigation";
 
-// export const metadata = {
-//   title: "Pricing",
-// };
-
 export default function PricingPage() {
-
-  // const router = useRouter();
 
   const handleCheckout = async () => {
     // Call your API endpoint to create a checkout session

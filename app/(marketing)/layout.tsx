@@ -1,5 +1,4 @@
 import { MainNav } from "@/components/main-nav";
-// import { MobileNav } from "@/components/mobile-nav";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -9,10 +8,9 @@ import Link from "@/node_modules/next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/toggle";
-// import HeroPage from "./hero/page";
+
 import { SiteFooter } from "@/components/site-footer";
 
-// import PricingPage from "./pricing/page";
 import MobileNav from "@/components/mobile-nav";
 import { getCurrentUser } from "@/lib/session";
 import { getAuthSession } from "@/lib/auth";
@@ -39,34 +37,15 @@ export default async function MarketingLayout({
   const isAuthenticated = !!user;
 
   return (
-    // <html lang="en" suppressHydrationWarning>
-    //     <body
-    //       className={cn(
-    //         "relative flex min-h-screen w-full flex-col justify-center scroll-smooth bg-background font-sans antialiased"
-    //       )}
-    //     >
-
     <>
       {isAuthenticated ? (
         // User is authenticated, show dashboard layout
         <>
-          {/* <div> */}
           <main className="flex w-full flex-col justify-center ">
-            <DashboardLayout >
-            <DashboardPage />
+            <DashboardLayout>
+              <DashboardPage />
             </DashboardLayout>
-            {/* <Link
-              href="/dashboard"
-              className={cn(
-                buttonVariants({ variant: "secondary", size: "sm" }),
-                "px-4"
-              )}
-            >
-              Oops!! Click here to go back to QuotesAI
-            </Link> */}
           </main>
-
-          {/* </div> */}
         </>
       ) : (
         <>
@@ -102,7 +81,5 @@ export default async function MarketingLayout({
         </>
       )}
     </>
-    //     </body>
-    // </html>
   );
 }

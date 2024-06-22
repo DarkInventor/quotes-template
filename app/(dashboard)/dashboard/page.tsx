@@ -133,21 +133,13 @@ function DashboardPage() {
   
       
     };
-
-  //   checkPaymentStatus();
-  // }, []);
-
-  // if (!hasPaid) {
-  //   return <div>Please make a payment to access this feature.</div>;
-  // }
-
   
   const getQuotes = async () => {
     const response = await axios.get(`/api/scrapper?tag=${tag}`);
     setQuotes(response.data.quotes);
     setspecialQuote(response.data.specialQuote);
   };
-  // if (hasPaid) {
+
   return (
     <div className={cn("grid gap-6 my-2 justify-center w-9/12 mx-auto")}>
       <div className="grid gap-2">
